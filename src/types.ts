@@ -24,7 +24,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Wild mushrooms, truffle oil, and aged gruyère cheese.',
     price: '$16.50',
     category: 'Breakfast',
-    image: 'https://images.unsplash.com/photo-1510629954389-c1e0da47d415?auto=format&fit=crop&q=80&w=800',
+    image: '/images/omelette_image_1778170284446.png',
   },
   {
     id: '3',
@@ -40,7 +40,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Cream cheese, capers, red onion, and fresh dill.',
     price: '$13.50',
     category: 'Lunch',
-    image: 'https://images.unsplash.com/photo-1584283838361-9c606e1ccb57?auto=format&fit=crop&q=80&w=800',
+    image: '/images/bagel_image_1778170299841.png',
     isBestSeller: true,
   },
   {
@@ -49,7 +49,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Signature espresso with hint of vanilla and caramel honeycomb.',
     price: '$6.50',
     category: 'Drinks',
-    image: 'https://images.unsplash.com/photo-1541167760496-162955ed8a9f?auto=format&fit=crop&q=80&w=800',
+    image: '/images/latte_image_1778170316687.png',
     isBestSeller: true,
   },
   {
@@ -66,7 +66,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: 'Warm chocolate center with homemade hazelnut gelato.',
     price: '$11.00',
     category: 'Desserts',
-    image: 'https://images.unsplash.com/photo-1541920443742-7f304ddfa442?auto=format&fit=crop&q=80&w=800',
+    image: '/images/fondant_image_1778170337354.png',
     isBestSeller: true,
   },
   {

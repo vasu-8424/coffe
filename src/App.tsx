@@ -152,7 +152,7 @@ const Hero = () => {
           <div className="w-full lg:w-1/2 h-[600px] flex flex-col gap-6">
             <div className="relative flex-1 group overflow-hidden rounded-2xl shadow-inner border border-coffee-dark/5">
               <img 
-                src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=1200" 
+                src="/images/hero_image_1778170260481.png" 
                 alt="House Special"
                 className="w-full h-full object-cover grayscale-[20%] transition-transform duration-1000 group-hover:scale-110"
                 referrerPolicy="no-referrer"
@@ -365,9 +365,9 @@ const About = () => {
               </div>
             </div>
 
-            <button className="px-10 py-4 border border-coffee-dark rounded-sm font-display text-lg hover:bg-coffee-dark hover:text-cream transition-all">
+            <a href="#contact" className="inline-block px-10 py-4 border border-coffee-dark rounded-sm font-display text-lg hover:bg-coffee-dark hover:text-cream transition-all">
               Discover More
-            </button>
+            </a>
           </motion.div>
         </div>
       </div>
@@ -403,6 +403,14 @@ const Contact = () => {
                   <h4 className="font-bold text-[10px] uppercase tracking-widest text-coffee-dark/40 mb-2">Hours</h4>
                   <p className="font-medium text-sm">Mon - Fri: 07:00 — 19:00</p>
                   <p className="font-medium text-sm">Sat - Sun: 08:00 — 21:00</p>
+                </div>
+              </div>
+              <div className="flex gap-6">
+                <div className="w-px h-12 bg-coffee-dark/20 shrink-0"></div>
+                <div>
+                  <h4 className="font-bold text-[10px] uppercase tracking-widest text-coffee-dark/40 mb-2">Contact</h4>
+                  <p className="font-medium text-sm">hello@luxebean.com</p>
+                  <p className="font-medium text-sm">+1 (555) 123-4567</p>
                 </div>
               </div>
             </div>
@@ -451,7 +459,8 @@ const Contact = () => {
                 ></textarea>
               </div>
               <button 
-                type="button"
+                type="submit"
+                onClick={(e) => e.preventDefault()}
                 className="w-full py-6 bg-coffee-dark text-cream rounded-sm font-display text-lg shadow-xl hover:shadow-2xl transition-all"
               >
                 Send Request
@@ -498,10 +507,35 @@ const Footer = () => {
     </footer>
   );
 };
+const FloatingBackground = () => (
+  <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+    <img 
+      src="/images/milkshake_cup_1_1778170586418.png" 
+      className="absolute top-[10%] left-[5%] w-48 md:w-64 opacity-[0.08] mix-blend-multiply animate-float-1 blur-[1px]" 
+      alt="" 
+    />
+    <img 
+      src="/images/milkshake_cup_2_1778170599388.png" 
+      className="absolute top-[40%] right-[10%] w-56 md:w-72 opacity-[0.08] mix-blend-multiply animate-float-2 blur-[2px]" 
+      alt="" 
+    />
+    <img 
+      src="/images/milkshake_cup_3_1778170615218.png" 
+      className="absolute bottom-[20%] left-[15%] w-64 md:w-80 opacity-[0.08] mix-blend-multiply animate-float-3 blur-[2px]" 
+      alt="" 
+    />
+    <img 
+      src="/images/milkshake_cup_1_1778170586418.png" 
+      className="absolute bottom-[5%] right-[20%] w-40 md:w-56 opacity-[0.08] mix-blend-multiply animate-float-1 blur-[1px]" 
+      alt="" 
+    />
+  </div>
+);
 
 export default function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <FloatingBackground />
       <Navbar />
       <Hero />
       <Stats />
